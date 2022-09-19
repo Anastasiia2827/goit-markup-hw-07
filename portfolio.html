@@ -18,36 +18,34 @@
   </head>
   <body>
     <!--Загаловок-->
-    <header class="main-menu">
+        <header class="main-menu">
       <div class="menu container">
         <nav class="menu-nav">
-          <a href="./index.html" class="logo link"> <span>Web</span>Studio </a>
+          <a href="./index.html" class="logo menu-nav__logo link"> <span>Web</span>Studio </a>
           <ul class="menu-links list">
-            <li>
-              <a href="./index.html" class="links link">Студія</a>
+            <li class="menu-links__item">
+              <a href="./index.html" class="menu-links__link link current">Студія</a>
             </li>
-            <li>
-              <a href="./portfolio.html" class="links link current"
-                >Портфоліо</a
-              >
+            <li class="menu-links__item">
+              <a href="./portfolio.html" class="menu-links__link link">Портфоліо</a>
             </li>
-            <li class="list">
-              <a href="#" class="links link">Контакти</a>
+            <li class="menu-links__item">
+              <a href="#" class="menu-links__link link">Контакти</a>
             </li>
           </ul>
         </nav>
         <ul class="header-contacts list">
           <li>
-            <a href="mailto:info@devstudio.com" class="link"
-              ><svg class="header-contacts-icon" width="16" height="12">
+            <a href="mailto:info@devstudio.com" class="contacts-link link"
+              ><svg class="contacts-link__icon" width="16" height="12">
                 <use href="./images/symbol-defs.svg#icon-email"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
           <li>
-            <a href="tel:+380961111111" class="link"
-              ><svg class="header-contacts-icon" width="10" height="16">
+            <a href="tel:+380961111111" class="contacts-link link"
+              ><svg class="contacts-link__icon" width="10" height="16">
                 <use href="./images/symbol-defs.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -56,6 +54,7 @@
         </ul>
       </div>
     </header>
+
 
     <!--Портфоліо-->
     <main>
@@ -271,11 +270,11 @@
     </main>
 
     <!--Підвал-->
-    <footer class="footer">
+        <footer class="footer">
       <div class="container footer-box">
         <div class="footer-info">
           <div class="footer-info-part">
-            <a href="./index.html" class="footer-logo link"
+            <a href="./index.html" class="logo footer__logo link"
               ><span>Web</span>Studio</a
             >
             <address class="footer-address">
