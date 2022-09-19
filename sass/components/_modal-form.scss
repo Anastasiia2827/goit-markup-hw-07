@@ -44,11 +44,11 @@
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-}
 
-.modal-form-input:focus {
+    &:focus {
     outline: none;
     border-color: var(--accent-color);
+    }
 }
 
 .modal-form-input-icon {
@@ -56,13 +56,12 @@
     top: 50%;
     left: 12px;
     transform: translateY(-50%);
-
     fill: #212121;
     transition: fill;
-}
 
-.modal-form-input:focus+.modal-form-input-icon {
+    .modal-form-input:focus+& {
     fill: var(--accent-color);
+   }
 }
 
 .modal-form-message {
@@ -77,20 +76,20 @@
 
     resize: none;
     transition: border var(--accent-color);
-}
 
-.modal-form-message::placeholder {
-    font-family: var(--primery-font);
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+    &::placeholder {
+     font-family: var(--primery-font);
+     font-size: 12px;
+     line-height: 1.17;
+     letter-spacing: 0.01em;
 
     color: rgba(117, 117, 117, 0.5);
-}
+   }
 
-.modal-form-message:focus {
-    outline: none;
-    border-color: var(--accent-color);
+    &:focus {
+     outline: none;
+     border-color: var(--accent-color);
+}
 }
 
 .modal-form-check-field {
@@ -109,24 +108,23 @@
     border: 1px solid #000;
     border-radius: 2px;
     cursor: pointer;
+
+    .modal-form-check:checked+& {
+    background-color: var(--accent-color);
+    border: var(--accent-color);
+    }
+    .modal-form-check:focus+& {
+    border-color: var(--accent-color);
+    } 
 }
 
 .modal-form-own-checkbox-icon {
     display: none;
     fill: #fff;
-}
 
-.modal-form-check:checked+.modal-form-own-checkbox {
-    background-color: var(--accent-color);
-    border: var(--accent-color);
-}
-
-.modal-form-check:checked+.modal-form-own-checkbox .modal-form-own-checkbox-icon {
+    .modal-form-check:checked+.modal-form-own-checkbox & {
     display: block;
-}
-
-.modal-form-check:focus+.modal-form-own-checkbox {
-    border-color: var(--accent-color);
+    }
 }
 
 .modal-form-check {
@@ -163,8 +161,7 @@
     min-height: 50px;
     border: none;
 
-    font-weight: 700;
-    font-size: 16px;
+    @include font(700);
     line-height: 1.88;
     align-items: center;
     text-align: center;
@@ -178,11 +175,11 @@
     color: var(--second-text-color);
 
     transition: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
+
+    &:hover,
+    &:focus {
+     background-color: #188ce8;
+    }
 }
 
-.btnmodal-form-submit:hover,
-.btnmodal-form-submit:focus {
-    background-color: #188ce8;
-}

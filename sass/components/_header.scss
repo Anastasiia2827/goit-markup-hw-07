@@ -21,15 +21,15 @@
     margin-left: auto;
 }
 
-.menu-links>li {
+.menu-links__item {
     margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0px;
+        }
 }
 
-.menu-links>li:last-child {
-    margin-right: 0px;
-}
-
-.links {
+.menu-links__link {
     padding-top: 32px;
     padding-bottom: 32px;
     display: block;
@@ -42,13 +42,17 @@
     color: var(--primary-text-color);
 
     transition: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
 
     position: relative;
+
+    &:hover,
+    &:focus {
+     color: var(--accent-color);
+        }
 }
 
-.links.current.links::after {
+.menu-links__link.current.menu-links__link::after {
     position: absolute;
     content: "";
     display: block;
@@ -60,16 +64,11 @@
     border-radius: 2px;
 }
 
-.links:hover,
-.links:focus {
-    color: var(--accent-color);
-}
-
 .header-contacts {
     column-gap: 50px;
 }
 
-.header-contacts a {
+.contacts-link {
     padding-top: 32px;
     padding-bottom: 32px;
     display: flex;
@@ -80,31 +79,24 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    color: var(--title-text-color);
+    transition: color;
+    @extend %transition;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
-.header-contacts-icon {
+.contacts-link__icon {
     margin-right: 10px;
     fill: #757575;
-
     transition: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+    @extend %transition;
 
-.header-contacts a {
-    color: var(--title-text-color);
-
-    transition: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-contacts a:hover,
-.header-contacts a:focus {
-    color: var(--accent-color);
-}
-
-.header-contacts a:hover .header-contacts-icon,
-.header-contacts a:focus .header-contacts-icon {
-    fill: var(--accent-color);
+    .header-contacts a:hover &,
+    .header-contacts a:focus & {
+        fill: var(--accent-color);
+    }
 }

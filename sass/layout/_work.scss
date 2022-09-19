@@ -1,23 +1,14 @@
-.work-title,
-.team-title,
-.clients-titel {
-    margin-bottom: 50px;
 
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-}
 
 .work-list {
     display: flex;
 }
 
-.work-item:not(:nth-child(3n)) {
+.work-list__item:not(:nth-child(3n)) {
     margin-right: 30px;
 }
 
-.work-item p {
+.work-list__text{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,6 +30,6 @@
     bottom: 0;
 }
 
-.work-item {
+.work-list__item {
     position: relative;
 }
